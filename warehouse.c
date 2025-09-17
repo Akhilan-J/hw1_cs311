@@ -48,11 +48,8 @@ int main(int argc, char **argv) {
 	if (argc<2) { printf("Please invoke as %s <order_file>\n",argv[0]); 	return 1; }
 	if (!openOrder(argv[1])) { return 1; }
 	do {
-		printf("time=%d | lastUsed: ", time);
 		for (int i = 0; i < 5; i++) {
-    			printf("%d ", lastUsed[i]);
 		}
-		printf("\n");
 		int pn=nextPartNumber();
 		int bin=pn/10;
 		/* Replace the following code with a better implementation */
